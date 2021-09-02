@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <form action="main.html">
+        <input type="text" id="name">
+        <br><br>
+        <input type="email" id="email">
+        <br><br>
+        <input type="file" id="file" onChange="fileName(this)" accept="audio/mpeg, audio/mp3, audio/ogg, video/mp4, video/ogg, video/webm">
+
+        <input type="submit" onclick="getData()" value="Submit">
+    </form>
+
+    <script>
+
+        function getData(){
+        var one = document.getElementById("name").value;
+        var two = document.getElementById("email").value;
+
+        localStorage.setItem("txtname", one);
+        localStorage.setItem("txtemail", two);
+
+    //     function loadFile(event) {
+	//     var filePath = document.getElementById('output');
+	//     filePath.src = URL.createObjectURL(event.target.files[0]);
+    //     var path = filePath.src;
+    //     console.log(path);
+    // };
+
+     
+        }
+        function fileName(myFile){
+            var file = myFile.files[0];  
+            var filename = file.name;
+            // alert(filename)
+            localStorage.setItem("txtfile", filename);
+        }
+
+
+    </script>
+</body>
+</html>
+
+
