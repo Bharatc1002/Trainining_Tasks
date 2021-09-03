@@ -8,14 +8,18 @@ Create one html file with name, email and file element. On submit display entere
 
 
 Date: 02-September-2021
+
 Description : 
+
 CSS3 animation, transformation
 CSS combinaors, Critical CSS
 Upload your task on git by only making one repo and also change readme file i.e.
 mention datewise task
 
 Date: 03-September-2021
+
 Description : 
+
 apply one practicals of each topic listed above
 Find circumstances of a circle
 Make multiple objects of the same class and call it Accordingly
