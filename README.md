@@ -1,5 +1,7 @@
 Date: 01-September-2021
+
 Description :
+
 HTML web storage API implementation.
 Create one html file with name, email and file element. On submit display entered data on second html page and play video directly whichever video user selected from file control and also display current address using geolocation concept
 
