@@ -1,0 +1,30 @@
+apply one practicals of each topic listed above
+
+1. Find circumstances of a circle (index.php)
+
+2. Make multiple objects of the same class and call it Accordingly (books.php)
+
+3. Apply multilevel inheritance (inheritance.php)
+
+4. Create object of only last class and Call parent class’ s functions (class1.php)
+
+5. Use needful access specifier that should not allow Outsider’s access (accessSpecifiers.php)
+
+6. Make such a function that should accept n. No. of
+Parameters and make sum of all the passed
+Parameters (sum.php)
+
+7. Override one function into the child class and call both the
+function Parent + child (inheritance.php)
+
+8. Is it possible to call a constructor manually? Describe Your answer
+
+9. Initialize class members by using default and
+Parameterized constructor (constructor.php & pConstructor.php)
+
+10. By making object of child class, call parent class’s
+Constructor. will the compiler auto call parent constructor
+Just by making an object for a child class? Describe your ans.
+
+11. Make one program that achieve polymorphism concept by
+Yourself if you have clearly understood (polymorphism.php)
