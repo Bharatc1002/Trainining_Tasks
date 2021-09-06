@@ -15,6 +15,7 @@ class Book {
 }
 
 $book1 = new Book("Harry Potter", "JK Rowling", 400);
+echo $book1->title;
 
 $book2 = new Book("Lord Of The Rings", "Tolkien", 700);
 
