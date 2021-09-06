@@ -2,9 +2,9 @@
 
 
 class Book {
-    var $title;
-    var $author;
-    var $pages;
+    public $title;
+    public $author;
+    public $pages;
 }
 
 $book1 = new Book;
@@ -23,8 +23,8 @@ $book3->author = "Paulo Coelho";
 $book3->pages = 200;
 
 $book4 = new Book;
-$book4->title = "Wings of Fire"
-$book4->author = "A. P. J. Abdul Kalam"
+$book4->title = "Wings of Fire";
+$book4->author = "A. P. J. Abdul Kalam";
 $book4->pages = 180;
 
 
