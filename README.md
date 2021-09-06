@@ -44,3 +44,11 @@ method (if it was not declared as private).  const.php)
 11. Make one program that achieve polymorphism concept by
 Yourself if you have clearly understood (polymorphism.php)
 
+Date: 04-September-2021
+
+Description : 
+
+self vs this (While initializing class level variables)
+Practical on default parameter
+What are magic functions?
+Magic functions available in PHP
