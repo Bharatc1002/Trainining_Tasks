@@ -4,7 +4,7 @@ apply one practicals of each topic listed above
 
 2. Make multiple objects of the same class and call it Accordingly (books.php)
 
-3. Apply multilevel inheritance (inheritance.php)
+3. Apply multilevel inheritance (multiclass.php) (inheritance.php)
 
 4. Create object of only last class and Call parent class’ s functions (class1.php)
 

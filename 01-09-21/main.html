@@ -10,8 +10,9 @@
 
     <p id="once"></p>
     <p id="twoo"></p>
-    <video id="vid1" controls autoplay muted>
-        <source id="video" src="" type="video/mp4">
+    <video controls>
+        <!-- id="vid1" controls autoplay muted -->
+        <!-- <source id="video" src="" type="video/mp4"> -->
     </video>
     <audio id="aud1" controls autoplay muted>
         <source id="audio" src="" type="audio/mp3">
@@ -27,6 +28,8 @@
         document.getElementById("once").innerHTML = localStorage.getItem("txtname");
         document.getElementById("twoo").innerHTML = localStorage.getItem("txtemail");
         var file = localStorage.getItem("txtfile");
+        var vidfile = localStorage.getItem("txtvideo");
+        console.log(vidfile);
         // console.log("/home/addweb/Downloads/"+file);
         
 
@@ -60,13 +63,23 @@
         }
 
         if (isVideo(file)){
-            document.getElementById("video").setAttribute("src", "./"+file);
+            // document.getElementById("video").setAttribute("src", "./"+file);
+            var video = document.getElementsByTagName('video')[0];
+            
+
+            const reader = new FileReader();
+            
+            video.src = reader.readAsDataURL(vidfile);
+            video.load();
+            video.onloadeddata = function() {
+            video.play();
+    }
             var link = document.getElementById('aud1');
             link.style.display = 'none';
         } else if(isAudio(file)){
-            document.getElementById("audio").setAttribute("src", "./"+file);
-            var link = document.getElementById('vid1');
-            link.style.display = 'none';
+            // document.getElementById("audio").setAttribute("src", "./"+file);
+            // var link = document.getElementById('vid1');
+            // link.style.display = 'none';
         } else {
             document.write("unsupported file");
         }
