@@ -17,14 +17,15 @@ Parameters (sum.php)
 7. Override one function into the child class and call both the
 function Parent + child (inheritance.php)
 
-8. Is it possible to call a constructor manually? Describe Your answer
+8. Is it possible to call a constructor manually? Describe Your answer (8.php)
 
 9. Initialize class members by using default and
-Parameterized constructor (constructor.php & pConstructor.php)
+Parameterized constructor (constructor.php, pConstructor.php & constructorUse.php)
 
 10. By making object of child class, call parent class’s
 Constructor. will the compiler auto call parent constructor
-Just by making an object for a child class? Describe your ans. (No const.php)
+Just by making an object for a child class? Describe your ans.
+(yes; const.php)
 
 11. Make one program that achieve polymorphism concept by
 Yourself if you have clearly understood (polymorphism.php)

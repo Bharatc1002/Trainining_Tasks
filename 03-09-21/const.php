@@ -1,22 +1,28 @@
 <?php
-
-class Room {
-    public $height;
-    public $width;
-
-    function __construct($aHeight, $aWidth){
-        $this->height = $aHeight;
-        $this->width = $aWidth;
-        
+class BaseClass {
+    function __construct() {
+        print "In BaseClass constructor\n";
     }
-
 }
 
-class Bad extends Room {
-    
+class SubClass extends BaseClass {
+    function __construct() {
+        parent::__construct();
+        print "In SubClass constructor\n";
+    }
 }
 
-$bad1 = new Bad(200, 300)
-$bad1->height;
+class OtherSubClass extends BaseClass {
+    // inherits BaseClass's constructor
+}
 
+// In BaseClass constructor
+$obj = new BaseClass();
+
+// In BaseClass constructor
+// In SubClass constructor
+$obj = new SubClass();
+
+// In BaseClass constructor
+$obj = new OtherSubClass();
 ?>
