@@ -21,22 +21,26 @@ Date: 03-September-2021
 Description : 
 
 apply one practicals of each topic listed above
-Find circumstances of a circle
-Make multiple objects of the same class and call it Accordingly
-Apply multilevel inheritance
-Create object of only last class and Call parent class’ s functions
-Use needful access specifier that should not allow Outsider’s access
-Make such a function that should accept n. No. of
+
+1. Find circumstances of a circle (index.php)
+2. Make multiple objects of the same class and call it Accordingly (books.php)
+3. Apply multilevel inheritance (multiclass.php) (inheritance.php)
+4. Create object of only last class and Call parent class’ s functions (class1.php)
+5. Use needful access specifier that should not allow Outsider’s access (accessSpecifiers.php)
+6. Make such a function that should accept n. No. of
 Parameters and make sum of all the passed
-Parameters
-Override one function into the child class and call both the
-function Parent + child
-Is it possible to call a constructor manually? Describe Your answer
-Initialize class members by using default and
-Parameterized constructor
-By making object of child class, call parent class’s
+Parameters (sum.php)
+7. Override one function into the child class and call both the
+function Parent + child (inheritance.php)
+8. Is it possible to call a constructor manually? Describe Your answer (8.php)
+9. Initialize class members by using default and
+Parameterized constructor (constructor.php, pConstructor.php & constructorUse.php)
+10. By making object of child class, call parent class’s
 Constructor. will the compiler auto call parent constructor
 Just by making an object for a child class? Describe your ans.
-Make one program that achieve polymorphism concept by
-Yourself if you have clearly understood
+(yes;  If the child does not define a constructor then it may 
+be inherited from the parent class just like a normal class 
+method (if it was not declared as private).  const.php)
+11. Make one program that achieve polymorphism concept by
+Yourself if you have clearly understood (polymorphism.php)
 
