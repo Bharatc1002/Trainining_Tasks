@@ -34,8 +34,9 @@ class Names {
     }
     public function __call($name, $array) 
     {
-        echo $methodName;
+        echo $name . "<br>";
         print_r($array);
+        echo "<br>";
     }
     public function __isset($name) 
     {
@@ -47,7 +48,7 @@ $name1= new Names('firstName', 'secondName'); //__construct function
 echo $name1->newName; // __get function
 echo $name1;  // __toString function
 $name1->func("Hello", "Welcome","Please sit"); //__call function
-$name1->names = "okay";
+$name1->names = "okay"; //__set function
 echo $name1->names; //__get function
 
 ?>
