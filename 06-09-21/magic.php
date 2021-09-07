@@ -2,6 +2,7 @@
 class Names {
     private $fName;
     private $lName;
+    public array = ["firstName" => "Bharat", "secondName" => "Chaudhary"];
  
     public function __construct($fname, $lname) 
     {
@@ -10,17 +11,15 @@ class Names {
     }
     public function __set($name, $value) 
     {
-        echo "properties name=".$name."and value".$value."<br>" ;
+        if(array_key_exists($name, $this->array)){
+            return $this->array[$name] = $value;
+        } else {
+            echo "invalid data member";
+        }
     }
     public function __get($name) 
     {
-        if($name === "newName")
-        {
-            return $this->name;
-        }
-        else{
-            echo "error <br>";
-        }
+        echo $name;
     }
     public function __toString()
     {
@@ -37,9 +36,9 @@ class Names {
     }
 }
  
-$obj= new Names('firstName', 'secondName');
-echo $obj->newName;
-echo $obj;
-$obj->hii("welcome");
+$name1= new Names('firstName', 'secondName');
+echo $name1->newName;
+echo $name1;
+$name1->func("welcome");
 
 ?>
