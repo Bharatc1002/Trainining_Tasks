@@ -2,12 +2,14 @@
 class Names {
     private $fName;
     private $lName;
-    public array = ["firstName" => "Bharat", "secondName" => "Chaudhary"];
+    public $array = array("firstName" => "Bharat", "secondName" => "Chaudhary", "names" => "write here");
  
     public function __construct($fname, $lname) 
     {
         $this->fName = $fname;
         $this->lName = $lname;
+        echo $this->fName . "<br>";
+        echo $this->lName . "<br>";
     }
     public function __set($name, $value) 
     {
@@ -19,16 +21,21 @@ class Names {
     }
     public function __get($name) 
     {
-        echo $name;
+        if(array_key_exists($name, $this->array)){
+            return $this->array[$name];
+        } else {
+            return "non-existing variable: $name <br>";
+        }
+        
     }
     public function __toString()
     {
-        return 'Student name: '.$this->name. 'Student surname: '.$this->sur."<br>";
+        return get_class($this) . "<br>";
     }
-    public function __call($methodName, $arguments) 
+    public function __call($name, $array) 
     {
         echo $methodName;
-        echo $arguments;
+        print_r($array);
     }
     public function __isset($name) 
     {
@@ -36,9 +43,11 @@ class Names {
     }
 }
  
-$name1= new Names('firstName', 'secondName');
-echo $name1->newName;
-echo $name1;
-$name1->func("welcome");
+$name1= new Names('firstName', 'secondName'); //__construct function
+echo $name1->newName; // __get function
+echo $name1;  // __toString function
+$name1->func("Hello", "Welcome","Please sit"); //__call function
+$name1->names = "okay";
+echo $name1->names; //__get function
 
 ?>

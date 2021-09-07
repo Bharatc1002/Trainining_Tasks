@@ -25,7 +25,9 @@ Parameterized constructor (constructor.php, pConstructor.php & constructorUse.ph
 10. By making object of child class, call parent class’s
 Constructor. will the compiler auto call parent constructor
 Just by making an object for a child class? Describe your ans.
-(yes; const.php)
+(yes;  If the child does not define a constructor then it may 
+be inherited from the parent class just like a normal class 
+method (if it was not declared as private).  const.php)
 
 11. Make one program that achieve polymorphism concept by
 Yourself if you have clearly understood (polymorphism.php)
