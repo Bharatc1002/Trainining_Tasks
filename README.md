@@ -2,8 +2,8 @@ Date: 01-September-2021
 
 Description :
 
-HTML web storage API implementation.
-Create one html file with name, email and file element. On submit display entered data on second html page and play video directly whichever video user selected from file control and also display current address using geolocation concept
+1. HTML web storage API implementation.
+2. Create one html file with name, email and file element. On submit display entered data on second html page and play video directly whichever video user selected    from file control and also display current address using geolocation concept
 
 
 
@@ -11,10 +11,10 @@ Date: 02-September-2021
 
 Description : 
 
-CSS3 animation, transformation
-CSS combinaors, Critical CSS
-Upload your task on git by only making one repo and also change readme file i.e.
-mention datewise task
+1. CSS3 animation, transformation
+2. CSS combinaors, Critical CSS
+3. Upload your task on git by only making one repo and also change readme file i.e.
+   mention datewise task
 
 Date: 03-September-2021
 
@@ -48,7 +48,7 @@ Date: 06-September-2021
 
 Description : 
 
-self vs this (While initializing class level variables)
-Practical on default parameter
-What are magic functions?
-Magic functions available in PHP
+1. self vs this (While initializing class level variables)
+2. Practical on default parameter
+3. What are magic functions?
+4. Magic functions available in PHP
