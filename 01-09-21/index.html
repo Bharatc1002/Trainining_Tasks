@@ -16,7 +16,7 @@
         <br><br>
         <input type="email" id="email">
         <br><br>
-        <input type="file" id="file" name="file" onchange="fileName(this)" accept="audio/mpeg, audio/mp3, audio/ogg, video/mp4, video/ogg, video/webm">
+        <input type="file" id="file" name="file" onchange="fileName()" accept="audio/mpeg, audio/mp3, audio/ogg, video/mp4, video/ogg, video/webm">
 
         <input type="submit" onclick="getData()" value="Submit">
     </form>
@@ -36,8 +36,6 @@
     //     var path = filePath.src;
     //     console.log(path);
     // };
-
-     
         }
         // function fileName(myFile){
         //     var file = myFile.files[0];  
@@ -45,18 +43,51 @@
         //     // alert(filename)
         //     localStorage.setItem("txtfile", filename);
         // }
-        var URL = window.URL || window.webkitURL;
+        // var URL = window.URL || window.webkitURL;
         
-        function fileName(hey){
-            // var URL = hey.window.URL || hey.window.webkitURL;
-            var fileItem = document.getElementById("file");
-            var files = fileItem.files;
-            var file = files[0];
-            var url = URL.createObjectURL(file);
-            localStorage.setItem("txtvideo", url);
-            var reader = new FileReader();
-            var name = reader.readAsDataURL(url);
-            alert(name);
+        // function fileName(hey){
+        //     // var URL = hey.window.URL || hey.window.webkitURL;
+        //     var fileItem1 = document.getElementById("file");
+        //     var files1 = fileItem1.files;
+        //     var file = files1[0];
+        //     var url = URL.createObjectURL(file);
+        //     localStorage.setItem("txtvideo", url);
+        //     var reader = new FileReader();
+        //     var name = reader.readAsDataURL(url);
+        //     alert(name);
+        // }
+        // fileInput is an HTMLInputElement: <input type="file" id="myfileinput" multiple>
+
+        function fileName(){
+        var fileInput = document.getElementById("file");
+// files is a FileList object (similar to NodeList)
+var files = fileInput.files;
+// object for allowed media types
+var accept = {
+  binary : ["image/png", "image/jpeg"],
+  text   : ["text/plain", "text/css", "application/xml", "text/html"]
+};
+
+var file;
+
+for (var i = 0; i < files.length; i++) {
+  file = files[i];
+
+  // if file type could be detected
+  if (file !== null) {
+    if (accept.binary.indexOf(file.type) > -1) {
+      // file is a binary, which we accept
+      var data = file.getAsBinary();
+      console.log(data);
+    } else if (accept.text.indexOf(file.type) > -1) {
+      // file is of type text, which we accept
+      var data = file.getAsText();
+      console.log(data);
+      // modify data with string methods
+    }
+  }
+}
+
         }
 
 
