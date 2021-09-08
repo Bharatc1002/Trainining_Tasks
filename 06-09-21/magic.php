@@ -38,10 +38,6 @@ class Names {
         print_r($array);
         echo "<br>";
     }
-    public function __isset($name) 
-    {
-        return isset($this->$name);
-    }
     public static function __callStatic($name, $array){
         echo $name . "<br>";
         foreach($array as $arg){
@@ -49,9 +45,14 @@ class Names {
         }
     }
     public function __isset($name){
-        echo $name;
+        if(isset($this->array[$name])){
+            echo $name . "<br>";
+        } else {
+            echo "not in array keys <br>";
+        }
     }
 }
+
  
 $name1= new Names('firstName', 'secondName'); //__construct function
 echo $name1->newName; // __get function
@@ -61,7 +62,7 @@ echo $name1->names . "<br>"; //__get function
 $name1->names = "okay"; //__set function
 echo $name1->names . "<br>"; //__get function
 Names::world("zero", "one", "two", "three"); //__callStatic function
-isset($name1->height);
 
+isset($name1->height);
 
 ?>
