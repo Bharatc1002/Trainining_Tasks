@@ -1,0 +1,29 @@
+1. yield vs return practically (yields.php)
+
+2. Check whether one can write same function in multiple
+interfaces and how to implement the same in class (mInterface.php)
+
+3. Can one implement an interface into the interface ?
+Describe your ans by implementing it practically (iInterface.php)
+
+4. Check whether there is a call of default constructor of base
+class while making object of derived class (constructor.php)
+
+5. Print the largest number among three parameters using
+Function and also include default parameter if not passed While function call (max.php)
+
+6. Swap two variable’s value using call by value and call by
+Reference. Which is better to use and why? (swap.php)
+
+7. Make one abstract class within that keep some methods
+Abstract and some as it is and call those abstract class’s Methods accordingly. (abstract.php)
+
+8. Can one use the final keyword with variables? Describe Your ans  (No, we can't use final keyword with variables.)
+
+9. Override final methods and call them accordingly (we can not Override final method)
+
+10. Inherit final class and use it’s properties accordingly (we can not inherit final class into any class.)
+
+11. Pass array into the function and update the values into the
+function and after that print an array. Check whether it
+Prints original array or an updated array (last.php)
