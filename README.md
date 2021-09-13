@@ -92,5 +92,4 @@ Date: 09-September-2021
 Description :
 
 1. Apply practicals on static function and variables
-2. 
-3. https://gitexercises.fracz.com/ visit this site and do exercises accordingly
+2. https://gitexercises.fracz.com/ visit this site and do exercises accordingly
