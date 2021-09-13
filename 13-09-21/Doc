@@ -1,0 +1,71 @@
+1. git verify
+2. git add A.txt
+   git commit -m "Commit A.txt file"
+3. git reset A.txt
+   git commit -m "Commit B.txt file"
+4. echo *.o > .gitignore
+   echo *.exe >> .gitignore
+   echo *.jar >> .gitignore
+   echo libraries/ >> .gitignore
+   git add .gitignore
+   git commit -m "Ignore binary files"
+5. git merge escaped
+6. git merge another-piece-of-work
+   echo 2+3=5 > equation.txt
+   git add equation.txt
+   git commit --no-edit
+7. git stash
+   # fix a bug
+   git commit -am "Fix a bug"
+   git stash pop
+   echo "Finally, finished it!" >> bug.txt
+   git commit -am "Finish my work"
+8. git rebase hot-bugfix
+9. git rm ignored.txt
+   git commit -am "Remove the file that should have been ignored"
+10. git mv File.txt file.txt
+    git commit -am "Lowercase file.txt"
+11. # fix the typo in the file
+    git commit -a --amend
+    # fix the typo in commit message
+12. git commit --amend --no-edit --date="1987-08-03"
+13. git rebase -i HEAD^^
+    # mark the first commit with "edit" command
+    # fix the typo in the file
+    git add file.txt
+    git rebase --continue
+    # fix the typo in the commit message
+14. git reflog
+    git reset --hard HEAD@{1}
+15. git reset HEAD^
+    git add first.txt
+    git commit -m "First.txt"
+    git add second.txt
+    git commit -m "Second.txt"
+16. git rebase -i HEAD^^
+    # "squash" or "fixup" the second commit
+17. git update-index --chmod=+x script.sh
+18. git add -p file.txt
+    # choose lines to include with 'y'
+    git commit -m "First part of changes"
+    git commit -am "The rest of the changed"
+19. git cherry-pick feature-a
+    git cherry-pick feature-b
+    git cherry-pick feature-c
+    # resolve merge conflict
+    git add -A
+    git cherry-pick --continue
+20. git rebase --onto your-master issue-555 rebase-complex
+21. git rebase -i HEAD~2
+    # move the second commit up
+22. git log -Sshit
+    git rebase -i <found commit>^
+    # remove the swearword
+    git rebase --continue
+23. git bisect start
+    git bisect bad HEAD
+    git bisect good 1.0
+    git bisect run sh -c "openssl enc -base64 -A -d < home-screen-text.txt | grep -v jackass"
+
+
+
