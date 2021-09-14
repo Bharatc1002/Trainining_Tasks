@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="one"></h1>
+    <h1 id="two"></h1>
+    <h1 id="three"></h1>
+    <h1 id="four"></h1>
+    <h1 id="five"></h1>
+    <h1 id="six"></h1>
+
+
+
+
+
+
+    <script>
+
+document.getElementById("one").innerHTML = localStorage.getItem("txtname")
+document.getElementById("two").innerHTML = localStorage.getItem("txtpassword")
+document.getElementById("three").innerHTML = localStorage.getItem("txttel")
+document.getElementById("four").innerHTML = localStorage.getItem("txtemail")
+document.getElementById("five").innerHTML = localStorage.getItem("txtstate")
+document.getElementById("six").innerHTML = localStorage.getItem("txtcity")
+
+
+    </script>
+</body>
+</html>
