@@ -137,3 +137,9 @@ Description :
 
 1. Apply practicals on static function and variables
 2. https://gitexercises.fracz.com/ visit this site and do exercises accordingly
+
+Date: 13-September-2021
+
+Description :
+
+1. Git exercises
