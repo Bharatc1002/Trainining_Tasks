@@ -1,0 +1,20 @@
+1. Pull an Apache image from registry and create a container of the image and login to the running container
+2. How to check the docker service status on local environment
+3. How to remove running docker images and docker containers
+4. Install lando on the local environment and setup a simple application of wordpress with lando
+
+
+Ans
+
+1. docker pull <img_name>
+   docker run <img_id>
+   docker exec -it <container name> /bin/bash
+2. systemctl status docker
+3. docker stop <container_name>
+   docker rm <container_name>
+   docker rmi <img_id>
+4. wget https://files.devwithlando.io/lando-stable.deb
+   sudo dpkg -i lando-stable.deb
+   cd <dir_name>
+   lando init
+   lando start

@@ -1,0 +1,21 @@
+1. Create a new user and set their password. Give the new user sudo permissions for privileged operations on the system. Switch to the new user and test their permissions by using sudo to run a command that requires root access.
+2. Create a directory and in that create a file and set all permission for specific files and directories.
+3. Allow the specific user to read and write the file. Other users in the same group should be able to read the file, but the public user should have no permission to read, write or execute.
+4. How to check running process in Linux
+5. Learn how to install particular packages on Linux
+6. How to check log files of particular server
+
+
+Ans
+1. sudo adduser newuser
+   sudo adduser newuser sudo
+   sudo -l
+2. sudo mkdir
+   sudo touch file
+   sudo chmod 777
+3. sudo chmod 740
+5. ps aux
+6. cd ./var/log/<server_name>/
+   ls -ld
+
+

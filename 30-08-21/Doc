@@ -1,0 +1,24 @@
+1. Create ur own personal GitHub account and create a sample repository with an application
+2. Clone the project repository into ur local and make changes in any one of the files and try to push the changed files to the GitHub repository.
+3. How to revert the committed changes in a repository
+4. How to create a new branch from master branch that should contain the files of master branch
+5. How to undo all the commits after the specified commit and preserves the changes locally
+6. Learn when to use merge and rebase commands
+7. How to bring our local environment up to date
+8. How to fix merge conflicts in git
+9. How to undo the last commit in git
+10. How to rename the branch name after it was create
+
+Ans.
+
+3. git revert HEAD^
+4. git checkout <branch_name>
+5. git reset --hard <commit_id>
+6. merge for merging two branch
+   rebase for merging history og two branch
+   rebase interactive tool for stop on any previous commit and make any changes there 
+7. git pull
+8. find conflicts using git diff <current_branch> <comp_branch>
+   make changes in files and solve conflicts
+9. git reset HEAD^
+10. git branch -m <old_name> <new_name>

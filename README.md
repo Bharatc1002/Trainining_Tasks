@@ -1,3 +1,47 @@
+
+Date: 26-August-2021
+
+Description :
+
+1. Create a new user and set their password. Give the new user sudo permissions for privileged     operations on the system. Switch to the new user and test their permissions by using sudo to run a command that requires root access.
+2. Create a directory and in that create a file and set all permission for specific files and directories.
+3. Allow the specific user to read and write the file. Other users in the same group should be able to read the file, but the public user should have no permission to read, write or execute.
+4. How to check running process in Linux
+5. Learn how to install particular packages on Linux
+6. How to check log files of particular server
+
+Date: 27-August-2021
+
+Description :
+
+1. Pull an Apache image from registry and create a container of the image and login to the running container
+2. How to check the docker service status on local environment
+3. How to remove running docker images and docker containers
+4. Install lando on the local environment and setup a simple application of wordpress with lando
+
+Date: 30-August-2021
+
+Description :
+
+1. Create ur own personal GitHub account and create a sample repository with an application
+2. Clone the project repository into ur local and make changes in any one of the files and try to push the changed files to the GitHub repository.
+3. How to revert the committed changes in a repository
+4. How to create a new branch from master branch that should contain the files of master branch
+5. How to undo all the commits after the specified commit and preserves the changes locally
+6. Learn when to use merge and rebase commands
+7. How to bring our local environment up to date
+8. How to fix merge conflicts in git
+9. How to undo the last commit in git
+10. How to rename the branch name after it was create
+
+Date: 31-August-2021
+
+Description :
+
+1. Analysis on sass
+2. What is sass? Use and benefits
+3. Perform one practical example
+
 Date: 01-September-2021
 
 Description :
