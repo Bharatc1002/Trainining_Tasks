@@ -143,3 +143,16 @@ Date: 13-September-2021
 Description :
 
 1. Git exercises
+
+     
+
+Date: 14-September-2021
+
+Description :
+
+1. Make whole dynamic form. Dynamic form means do not write anything in body section of HTML and
+create everything using JS. Onload of body form should be displayed.
+2. That form should include following fields
+Name, Password, Phone number, Email-id, Address, State, City, Submit button
+i. On submittion of this form entered details should be listed on the next page
+ii. In state dropdown list atleast two states and on selection of state city’s dropdown should be filled accordingly
