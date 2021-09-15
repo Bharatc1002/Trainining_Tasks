@@ -1,4 +1,4 @@
-var elementname;
+
 function caller(){
 
     var form = document.createElement("form");
@@ -41,7 +41,6 @@ function caller(){
     elementpass.setAttribute("required", "true");
     if(localStorage.getItem("txtpassword")!="")
     elementpass.setAttribute("value", localStorage.getItem("txtpassword"));
-
     form.appendChild(elementpass);
 
     var div = document.createElement("div");
@@ -67,6 +66,8 @@ function caller(){
     elementtel.setAttribute("placeholder", "Phone Number");
     elementtel.setAttribute("onblur", "validateTel()");
     elementtel.setAttribute("required", "true");
+    if(localStorage.getItem("txttel")!="")
+    elementpass.setAttribute("value", localStorage.getItem("txttel"));
     div.appendChild(elementtel);
     form.appendChild(div);
     var br = document.createElement("br");
@@ -84,6 +85,8 @@ function caller(){
     elementemail.setAttribute("placeholder", "Email");
     elementemail.setAttribute("onblur", "validateEmail()");
     elementemail.setAttribute("required", "true");
+    if(localStorage.getItem("txtemail")!="")
+    elementpass.setAttribute("value", localStorage.getItem("txtemail"));
     form.appendChild(elementemail);
     var br = document.createElement("br");
     form.appendChild(br);
@@ -157,8 +160,7 @@ function city(){
     }
 
     function setter(){
-
-        
+        // form.setAttribute("action", "");
 
         var name = document.getElementById("name").value;
         var password = document.getElementById("password").value;
@@ -175,10 +177,10 @@ function city(){
         localStorage.setItem("txtcity", citie);
 
 
-        var tagtext = document.getElementById("tag").value;
-        if(tagtext === "password is Strong" || tagtext === "password is less strong"){
+        var tagtext = document.getElementById("tag").innerHTML;
+        if((tagtext == "password is Strong" || tagtext == "password is less strong") && validateEmail() && validateTel()){
                 form.setAttribute("action", "new.html");            
-        } else {
+        }else {
             previousData(); 
         }
     }
@@ -189,8 +191,8 @@ function city(){
             elementpass.innerHTML = localStorage.getItem("txtpassword");
             elementtel.innerHTML = localStorage.getItem("txttel")
             elementemail.innerHTML = localStorage.getItem("txtemail")
-            // select.innerHTML = localStorage.getItem("txtstate")
-            // select1.innerHTML = localStorage.getItem("txtcity")   
+            select.innerHTML = localStorage.getItem("txtstate")
+            select1.innerHTML = localStorage.getItem("txtcity")   
     }
 
     function validateTel(){
@@ -198,7 +200,9 @@ function city(){
         
         if (tel.length != 10){
             alert("Phone number should be 10 digits long!");
-            
+            return false;            
+        } else {
+            return true;
         }
     }
 
@@ -208,7 +212,10 @@ function city(){
         var check = pattern.test(String(email).toLowerCase());
         if (!check){
             alert("invalid mail")
-        } 
+            return false;
+        } else {
+            return true;
+        }
     }
 
     function validatePassword(){
@@ -223,6 +230,7 @@ function city(){
         var check1 = pattern1.test(pass);
         if ((check1==true) && (pass.length >= 6) && (check==true)){
             document.getElementById("tag").innerHTML = "password is Strong";
+            
         } else if((!check1) && (pass.length >= 6) && (check)){
             document.getElementById("tag").innerHTML = "password is less strong";
             //alert("please use combination of small/capital characters, digits, special characters to make password stronger");
