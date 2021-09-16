@@ -32,11 +32,13 @@ function caller(){
     label.setAttribute("for", "password");
     label.innerHTML = "Password";
     div.appendChild(label);
+    var div1 = document.createElement('div');
+    div.setAttribute("class", "form-group has-feedback");
     var elementpass = document.createElement("input");
     elementpass.setAttribute("type", "password");
     elementpass.setAttribute("name", "password");
     elementpass.setAttribute("id", "password");
-    elementpass.setAttribute("class", "form-control");
+    elementpass.setAttribute("class", "form-control flex");
     elementpass.setAttribute("placeholder", "password");
     elementpass.setAttribute("onblur", "validatePassword()");
     elementpass.setAttribute("onkeyup", "liveValidate()");
@@ -44,7 +46,12 @@ function caller(){
     if(localStorage.getItem("txtpassword")!=""){
         elementpass.setAttribute("value", JSON.parse(localStorage.getItem("txtpassword")));
     }
-    div.appendChild(elementpass);
+    var togglepass = document.createElement("i");
+    togglepass.setAttribute("id", "togglePassword");
+    togglepass.setAttribute("class", "bi bi-eye-slash flex");
+    div1.appendChild(elementpass);
+    div1.appendChild(togglepass);
+    div.appendChild(div1);
     form.appendChild(div);
 
     var div = document.createElement("div");
@@ -142,16 +149,45 @@ function caller(){
     var br = document.createElement("br");
     form.appendChild(br);
 
+    var div = document.createElement('div');
+    div.setAttribute("class", "form-group has-feedback");
     var btn = document.createElement("button");
     btn.setAttribute("type", "submit");
+    btn.setAttribute("class", "btn btn-primary flex");
     btn.innerHTML = "Submit";
     btn.setAttribute("name", "button");
-    form.appendChild(btn);
+    var myVar = setInterval(myTimer, 1000);
+    var btn1 = document.createElement('button');
+    btn1.setAttribute("type", "button");
+    btn1.setAttribute("class", "btn btn-primary flex tbtn");
+    btn1.setAttribute("id", "demo");
+    btn1.innerHTML = "";
+    div.appendChild(btn);
+    div.appendChild(btn1);
+    form.appendChild(div);
 
     document.getElementsByTagName("body")[0].appendChild(form);
 
+
+
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye / eye slash icon
+        this.classList.toggle('bi-eye');
+    });
+
 };
 
+function myTimer(){
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById("demo").innerHTML = t;
+}
 
 
 
