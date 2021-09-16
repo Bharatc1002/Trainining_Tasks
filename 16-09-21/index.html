@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+    <button id="button" onclick="loadPage()">Back</button>
     <div id="demo">
         <h2>The XMLHttpRequest Object</h2>
         <button type="button" onclick="loadDoc1()">Assignment_1</button>
-        <button type="button" onclick="loadDoc2()">Assignment</button>
-        <button type="button" onclick="loadDoc3()">Assignment</button>
+        <button type="button" onclick="loadDoc2()">Assignment_2</button>
+        <button type="button" onclick="loadDoc3()">Assignment_3</button>
         </div>
 
 
@@ -46,6 +47,15 @@
           xhttp.open("GET", "box.html");
           xhttp.send();
         }
+
+        function loadPage() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+            document.getElementById("demo").innerHTML =this.responseText;
+            }
+            xhttp.open("GET", "index.html");
+            xhttp.send();
+            }
         </script>
 </body>
 </html>
