@@ -254,7 +254,7 @@ function city(){
         var tel = document.getElementById("tel").value;
         
         if (tel.length != 10){
-            alert("Phone number should be 10 digits long!");
+            alert("Invalid Phone Number!");
             return false;            
         } else {
             return true;
@@ -266,7 +266,7 @@ function city(){
         var pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; 
         var check = pattern.test(String(email).toLowerCase());
         if (!check){
-            alert("invalid mail")
+            alert("invalid mail");
             return false;
         } else {
             return true;
@@ -288,10 +288,10 @@ function city(){
             return true;
         } else if((!check1) && (pass.length >= 6) && (check)){
             document.getElementById("tag").innerHTML = "password is less strong";
-            //alert("please use combination of small-capital characters, digits to make password stronger");
             return true;
         } else {
             document.getElementById("tag").innerHTML = "password is weak";
+            alert("pasword is weak!");
             return false;
         } 
     }
