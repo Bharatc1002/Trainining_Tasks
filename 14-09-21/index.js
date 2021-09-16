@@ -33,7 +33,7 @@ function caller(){
     label.innerHTML = "Password";
     div.appendChild(label);
     var elementpass = document.createElement("input");
-    elementpass.setAttribute("type", "text");
+    elementpass.setAttribute("type", "password");
     elementpass.setAttribute("name", "password");
     elementpass.setAttribute("id", "password");
     elementpass.setAttribute("class", "form-control");
@@ -41,6 +41,9 @@ function caller(){
     elementpass.setAttribute("onblur", "validatePassword()");
     elementpass.setAttribute("onkeyup", "liveValidate()");
     elementpass.setAttribute("required", "true");
+    if(localStorage.getItem("txtpassword")!=""){
+        elementpass.setAttribute("value", JSON.parse(localStorage.getItem("txtpassword")));
+    }
     div.appendChild(elementpass);
     form.appendChild(div);
 
@@ -67,8 +70,9 @@ function caller(){
     elementtel.setAttribute("placeholder", "Phone Number");
     elementtel.setAttribute("onblur", "validateTel()");
     elementtel.setAttribute("required", "true");
-    if(localStorage.getItem("txttel")!="")
-    elementpass.setAttribute("value", localStorage.getItem("txttel"));
+    if(localStorage.getItem("txttel")!=""){
+    elementtel.setAttribute("value", JSON.parse(localStorage.getItem("txttel")));
+    }
     div.appendChild(elementtel);
     form.appendChild(div);
     var br = document.createElement("br");
@@ -86,8 +90,9 @@ function caller(){
     elementemail.setAttribute("placeholder", "Email");
     elementemail.setAttribute("onblur", "validateEmail()");
     elementemail.setAttribute("required", "true");
-    if(localStorage.getItem("txtemail")!="")
-    elementpass.setAttribute("value", localStorage.getItem("txtemail"));
+    if(localStorage.getItem("txtemail")!=""){
+        elementemail.setAttribute("value", JSON.parse(localStorage.getItem("txtemail")));
+    }
     form.appendChild(elementemail);
     var br = document.createElement("br");
     form.appendChild(br);
@@ -110,6 +115,7 @@ function caller(){
     optiond.innerHTML = "Select";
     option1.innerHTML = "Gujarat";
     option2.innerHTML = "Maharastra";
+    
     select.appendChild(optiond);
     select.appendChild(option1)
     select.appendChild(option2);
@@ -196,8 +202,9 @@ function city(){
     function previousData(){
             form.setAttribute("action", "index.html");
             elementname.innerHTML= localStorage.getItem("txtname");
+            elementpass.innerHTML = localStorage.getItem("txtpassword");
             elementtel.innerHTML = localStorage.getItem("txttel")
-            elementemail.innerHTML = localStorage.getItem("txtemail")   
+            elementemail.innerHTML = localStorage.getItem("txtemail")
     }
 
     function validateTel(){
@@ -238,7 +245,7 @@ function city(){
             return true;
         } else if((!check1) && (pass.length >= 6) && (check)){
             document.getElementById("tag").innerHTML = "password is less strong";
-            //alert("please use combination of small/capital characters, digits, special characters to make password stronger");
+            //alert("please use combination of small-capital characters, digits to make password stronger");
             return true;
         } else {
             document.getElementById("tag").innerHTML = "password is weak";
