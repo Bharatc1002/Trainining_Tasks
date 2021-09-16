@@ -162,3 +162,5 @@ Date: 15-September-2021
 Description :
 
 1. Take one div element of 500 X 500. Within that div take another div of 100 X 100. On each click of inner div it’s posistion should be changed and display again on some random position this should be go on till 30 seconds. After completion of 30 seconds count number of clicks and display in alert.
+
+Ans : https://jsfiddle.net/Bharat1002/y5peg301/5/

@@ -10,10 +10,11 @@ var k = 0;
     
 })
 
-    setTimeout(myTimer, 30000);
+setInterval(myTimer, 30000);
 
-    function myTimer(){
-        alert(k);
-    }
+function myTimer(){
+    alert(k);
+    k = 0;
+}
 
     
