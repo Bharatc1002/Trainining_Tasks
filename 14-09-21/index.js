@@ -26,12 +26,14 @@ function caller(){
     var br = document.createElement("br");
     form.appendChild(br);
     
+    var div = document.createElement('div');
+    div.setAttribute("class", "form-group has-feedback");
     var label = document.createElement('label');
     label.setAttribute("for", "password");
     label.innerHTML = "Password";
-    form.appendChild(label);
+    div.appendChild(label);
     var elementpass = document.createElement("input");
-    elementpass.setAttribute("type", "password");
+    elementpass.setAttribute("type", "text");
     elementpass.setAttribute("name", "password");
     elementpass.setAttribute("id", "password");
     elementpass.setAttribute("class", "form-control");
@@ -39,9 +41,8 @@ function caller(){
     elementpass.setAttribute("onblur", "validatePassword()");
     elementpass.setAttribute("onkeyup", "liveValidate()");
     elementpass.setAttribute("required", "true");
-    if(localStorage.getItem("txtpassword")!="")
-    elementpass.setAttribute("value", localStorage.getItem("txtpassword"));
-    form.appendChild(elementpass);
+    div.appendChild(elementpass);
+    form.appendChild(div);
 
     var div = document.createElement("div");
     div.setAttribute("id", "message");
@@ -100,12 +101,16 @@ function caller(){
     select.setAttribute("id", "state");
     select.setAttribute("class", "form-control");
     select.setAttribute("required", "true");
+    var optiond = document.createElement("option");
+    optiond.setAttribute("name", "defaultOption");
     var option1 = document.createElement("option");
     option1.setAttribute("name", "firstOption");
     var option2 = document.createElement("option");
     option2.setAttribute("name", "secondOption");
+    optiond.innerHTML = "Select";
     option1.innerHTML = "Gujarat";
     option2.innerHTML = "Maharastra";
+    select.appendChild(optiond);
     select.appendChild(option1)
     select.appendChild(option2);
     form.appendChild(select);
@@ -156,6 +161,9 @@ function city(){
     } else if (x == 'Maharastra') {
         optionx.innerHTML = "Mumbai";
         optiony.innerHTML = "Pune";
+    } else {
+        optionx.innerHTML = "";
+        optiony.innerHTML = "";
     }
     }
 
@@ -170,15 +178,15 @@ function city(){
         var citie = document.getElementById("citie")[0].value;
 
         localStorage.setItem("txtname", name);
-        localStorage.setItem("txtpassword", password);
-        localStorage.setItem("txttel", tel);
-        localStorage.setItem("txtemail", email);
+        localStorage.setItem("txtpassword", JSON.stringify(password));
+        localStorage.setItem("txttel", JSON.stringify(tel));
+        localStorage.setItem("txtemail", JSON.stringify(email));
         localStorage.setItem("txtstate", state);
         localStorage.setItem("txtcity", citie);
 
 
         var tagtext = document.getElementById("tag").innerHTML;
-        if((tagtext == "password is Strong" || tagtext == "password is less strong") && validateEmail() && validateTel()){
+        if(validatePassword() && validateEmail() && validateTel()){
                 form.setAttribute("action", "new.html");            
         }else {
             previousData(); 
@@ -188,11 +196,8 @@ function city(){
     function previousData(){
             form.setAttribute("action", "index.html");
             elementname.innerHTML= localStorage.getItem("txtname");
-            elementpass.innerHTML = localStorage.getItem("txtpassword");
             elementtel.innerHTML = localStorage.getItem("txttel")
-            elementemail.innerHTML = localStorage.getItem("txtemail")
-            select.innerHTML = localStorage.getItem("txtstate")
-            select1.innerHTML = localStorage.getItem("txtcity")   
+            elementemail.innerHTML = localStorage.getItem("txtemail")   
     }
 
     function validateTel(){
@@ -230,12 +235,14 @@ function city(){
         var check1 = pattern1.test(pass);
         if ((check1==true) && (pass.length >= 6) && (check==true)){
             document.getElementById("tag").innerHTML = "password is Strong";
-            
+            return true;
         } else if((!check1) && (pass.length >= 6) && (check)){
             document.getElementById("tag").innerHTML = "password is less strong";
             //alert("please use combination of small/capital characters, digits, special characters to make password stronger");
+            return true;
         } else {
             document.getElementById("tag").innerHTML = "password is weak";
+            return false;
         } 
     }
 
