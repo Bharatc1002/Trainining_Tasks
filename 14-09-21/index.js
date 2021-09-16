@@ -8,10 +8,21 @@ function caller(){
 
     var div = document.createElement('div');
     div.setAttribute("class", "form-group has-feedback");
+    var div1 = document.createElement('div');
+    div1.setAttribute("class", "form-group has-feedback flexs");
     var label = document.createElement('label');
     label.setAttribute("for", "name");
+    label.setAttribute("class", "labels")
     label.innerHTML = "Name";
-    div.appendChild(label);
+    var myVar = setInterval(myTimer, 1000);
+    var btn1 = document.createElement('button');
+    btn1.setAttribute("type", "button");
+    btn1.setAttribute("class", "btn btn-light tbtn");
+    btn1.setAttribute("id", "demo");
+    btn1.innerHTML = "";
+    div1.appendChild(label);
+    div1.appendChild(btn1);
+    div.appendChild(div1);
     elementname = document.createElement("input");
     elementname.setAttribute("type", "text");
     elementname.setAttribute("name", "name");
@@ -153,17 +164,10 @@ function caller(){
     div.setAttribute("class", "form-group has-feedback");
     var btn = document.createElement("button");
     btn.setAttribute("type", "submit");
-    btn.setAttribute("class", "btn btn-primary flex");
+    btn.setAttribute("class", "btn btn-primary");
     btn.innerHTML = "Submit";
     btn.setAttribute("name", "button");
-    var myVar = setInterval(myTimer, 1000);
-    var btn1 = document.createElement('button');
-    btn1.setAttribute("type", "button");
-    btn1.setAttribute("class", "btn btn-primary flex tbtn");
-    btn1.setAttribute("id", "demo");
-    btn1.innerHTML = "";
     div.appendChild(btn);
-    div.appendChild(btn1);
     form.appendChild(div);
 
     document.getElementsByTagName("body")[0].appendChild(form);
@@ -180,6 +184,9 @@ function caller(){
         // toggle the eye / eye slash icon
         this.classList.toggle('bi-eye');
     });
+    var date = new Date();
+    var time = date.toLocaleTimeString();
+    document.getElementById("demo").innerHTML = time;
 
 };
 
