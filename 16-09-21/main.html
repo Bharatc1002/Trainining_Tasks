@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doc</title>
+</head>
+<body>
+
+    <p id="once"></p>
+    <p id="twoo"></p>
+    <video controls>
+        <!-- id="vid1" controls autoplay muted -->
+        <!-- <source id="video" src="" type="video/mp4"> -->
+    </video>
+    <audio id="aud1" controls autoplay muted>
+        <source id="audio" src="" type="audio/mp3">
+
+    </audio>
+
+    <a href="" id="location">Location</a>
+    <div id="map">
+        <iframe id="google_map" width="400" height="400" src="https://www.google.co.in/maps"></iframe>
+    </div>
+
+    <script>
+        document.getElementById("once").innerHTML = localStorage.getItem("txtname");
+        document.getElementById("twoo").innerHTML = localStorage.getItem("txtemail");
+        var file = localStorage.getItem("txtfile");
+        var vidfile = localStorage.getItem("txtvideo");
+        console.log(vidfile);
+        // console.log("/home/addweb/Downloads/"+file);
+        
+
+        function getExtension(file) {
+            var parts = file.split('.');
+            return parts[parts.length - 1];
+        }
+  
+        function isVideo(file) {
+            var ext = getExtension(file);
+            switch (ext.toLowerCase()) {
+            case 'webm':
+            case 'ogg':
+            case 'mp4':
+                // etc
+                return true;
+            }
+            return false;
+        }
+
+        function isAudio(file) {
+            var ext = getExtension(file);
+            switch (ext.toLowerCase()) {
+            case 'wav':
+            case 'ogg':
+            case 'mp3':
+                // etc
+                return true;
+            }
+            return false;
+        }
+
+        if (isVideo(file)){
+            // document.getElementById("video").setAttribute("src", "./"+file);
+            var video = document.getElementsByTagName('video')[0];
+            
+
+            const reader = new FileReader();
+            
+            video.src = reader.readAsDataURL(vidfile);
+            video.load();
+            video.onloadeddata = function() {
+            video.play();
+    }
+            var link = document.getElementById('aud1');
+            link.style.display = 'none';
+        } else if(isAudio(file)){
+            // document.getElementById("audio").setAttribute("src", "./"+file);
+            // var link = document.getElementById('vid1');
+            // link.style.display = 'none';
+        } else {
+            document.write("unsupported file");
+        }
+
+        var c = function(pos)
+{
+    var lat = pos.coords.latitude;
+    var long = pos.coords.longitude;
+    var coords = lat + ' ' + long;
+
+    document.getElementById('google_map').setAttribute('src','https://maps.google.co.in/?q=' + coords + '&z=60&output=embed');
+}
+    document.getElementById('location').onclick = function(){
+    navigator.geolocation.getCurrentPosition(c);
+    return false;
+    }
+    </script>
+</body>
+</html>
