@@ -14,12 +14,11 @@ function caller(){
     label.setAttribute("for", "name");
     label.setAttribute("class", "labels")
     label.innerHTML = "Name";
-    var myVar = setInterval(myTimer, 1000);
     var btn1 = document.createElement('button');
     btn1.setAttribute("type", "button");
     btn1.setAttribute("class", "btn btn-light tbtn");
-    btn1.setAttribute("id", "demo");
-    btn1.innerHTML = "";
+    btn1.setAttribute("id", "time");
+    btn1.innerHTML = "time";
     div1.appendChild(label);
     div1.appendChild(btn1);
     div.appendChild(div1);
@@ -184,16 +183,19 @@ function caller(){
         // toggle the eye / eye slash icon
         this.classList.toggle('bi-eye');
     });
+
+    setInterval(myTimer, 1000);
     var date = new Date();
     var time = date.toLocaleTimeString();
-    document.getElementById("demo").innerHTML = time;
+    document.getElementById("time").innerHTML = time;
 
 };
 
 function myTimer(){
     var d = new Date();
     var t = d.toLocaleTimeString();
-    document.getElementById("demo").innerHTML = t;
+    document.getElementById("time").innerHTML = t;
+    return t;
 }
 
 
@@ -232,6 +234,7 @@ function city(){
         localStorage.setItem("txtemail", JSON.stringify(email));
         localStorage.setItem("txtstate", state);
         localStorage.setItem("txtcity", citie);
+        localStorage.setItem("txttime", JSON.stringify(myTimer()));
 
 
         var tagtext = document.getElementById("tag").innerHTML;

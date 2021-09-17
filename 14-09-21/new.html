@@ -13,14 +13,17 @@
     <h1 id="four"></h1>
     <h1 id="five"></h1>
     <h1 id="six"></h1>
+    <h1 id="seven"></h1>
     <script>
 
 document.getElementById("one").innerHTML = localStorage.getItem("txtname")
-document.getElementById("two").innerHTML = localStorage.getItem("txtpassword")
-document.getElementById("three").innerHTML = localStorage.getItem("txttel")
-document.getElementById("four").innerHTML = localStorage.getItem("txtemail")
+document.getElementById("two").innerHTML = JSON.parse(localStorage.getItem("txtpassword"))
+document.getElementById("three").innerHTML = JSON.parse(localStorage.getItem("txttel"))
+document.getElementById("four").innerHTML = JSON.parse(localStorage.getItem("txtemail"))
 document.getElementById("five").innerHTML = localStorage.getItem("txtstate")
 document.getElementById("six").innerHTML = localStorage.getItem("txtcity")
+document.getElementById("seven").innerHTML = "Submite at : " + JSON.parse(localStorage.getItem("txttime"))
+
 
 
     </script>
