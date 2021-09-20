@@ -172,3 +172,13 @@ Description :
 1. Save all your practicals as Assignment 1, Assignment 2 and onwards.
 Make one html file and take 3 buttons name as Assignment 1, Assignment 2 and Assignment 3.
 Onclick of each button that file should be opened on the same URL without redirecting.
+
+Date: 20-September-2021
+
+Description :
+
+1. --JS Events
+2. --JS Fetch and JS Callbacks
+3. --JS Asynchronous
+4. --JS Promises
+5. --Schedulers
