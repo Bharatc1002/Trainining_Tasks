@@ -1,7 +1,7 @@
 
 Date: 26-August-2021
 
-#Description 
+Description 
 
 1. Create a new user and set their password. Give the new user sudo permissions for privileged     operations on the system. Switch to the new user and test their permissions by using sudo to run a command that requires root access.
 2. Create a directory and in that create a file and set all permission for specific files and directories.
