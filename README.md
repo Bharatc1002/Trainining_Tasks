@@ -182,3 +182,30 @@ Description :
 3. --JS Asynchronous
 4. --JS Promises
 5. --Schedulers
+
+Date: 21-September-2021
+
+Description :
+
+1. --Destructuring Arrays
+2. --Destructuring Objects
+3. --Practicals of promise, Schedulers
+4. --ES6 Classes
+
+Date: 22-September-2021
+
+Description :
+
+1. read TS Basics from typescriptlang.org
+
+Date: 23-September-2021
+
+Description :
+
+Practicals in TS
+1. class
+2. interface
+3. “use strict”
+4. composing types
+5. Generics
+
