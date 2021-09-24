@@ -10,7 +10,7 @@ Description
 5. Learn how to install particular packages on Linux
 6. How to check log files of particular server
 
-Date: 27-August-2021
+# Date: 27-August-2021
 
 Description :
 
@@ -19,7 +19,7 @@ Description :
 3. How to remove running docker images and docker containers
 4. Install lando on the local environment and setup a simple application of wordpress with lando
 
-Date: 30-August-2021
+# Date: 30-August-2021
 
 Description :
 
@@ -34,7 +34,7 @@ Description :
 9. How to undo the last commit in git
 10. How to rename the branch name after it was create
 
-Date: 31-August-2021
+# Date: 31-August-2021
 
 Description :
 
@@ -42,7 +42,7 @@ Description :
 2. What is sass? Use and benefits
 3. Perform one practical example
 
-Date: 01-September-2021
+# Date: 01-September-2021
 
 Description :
 
@@ -51,7 +51,7 @@ Description :
 
 
 
-Date: 02-September-2021
+# Date: 02-September-2021
 
 Description : 
 
@@ -60,7 +60,7 @@ Description :
 3. Upload your task on git by only making one repo and also change readme file i.e.
    mention datewise task
 
-Date: 03-September-2021
+# Date: 03-September-2021
 
 Description : 
 
@@ -88,7 +88,7 @@ method (if it was not declared as private).  const.php)
 11. Make one program that achieve polymorphism concept by
 Yourself if you have clearly understood (polymorphism.php)
 
-Date: 06-September-2021
+# Date: 06-September-2021
 
 Description : 
 
@@ -97,7 +97,7 @@ Description :
 3. What are magic functions?
 4. Magic functions available in PHP
 
-Date: 08-September-2021
+# Date: 08-September-2021
 
 Description : 
 
@@ -131,14 +131,14 @@ Abstract and some as it is and call those abstract class’s Methods accordingly
 function and after that print an array. Check whether it
 Prints original array or an updated array (last.php)
 
-Date: 09-September-2021
+# Date: 09-September-2021
 
 Description :
 
 1. Apply practicals on static function and variables
 2. https://gitexercises.fracz.com/ visit this site and do exercises accordingly
 
-Date: 13-September-2021
+# Date: 13-September-2021
 
 Description :
 
@@ -146,7 +146,7 @@ Description :
 
      
 
-Date: 14-September-2021
+# Date: 14-September-2021
 
 Description :
 
@@ -157,7 +157,7 @@ Name, Password, Phone number, Email-id, Address, State, City, Submit button.
 (i). On submittion of this form entered details should be listed on the next page.
 (ii). In state dropdown list atleast two states and on selection of state city’s dropdown should be filled accordingly
 
-Date: 15-September-2021
+# Date: 15-September-2021
 
 Description :
 
@@ -165,7 +165,7 @@ Description :
 
 Ans : https://jsfiddle.net/Bharat1002/y5peg301/5/show
 
-Date: 16-September-2021
+# Date: 16-September-2021
 
 Description :
 
@@ -173,7 +173,7 @@ Description :
 Make one html file and take 3 buttons name as Assignment 1, Assignment 2 and Assignment 3.
 Onclick of each button that file should be opened on the same URL without redirecting.
 
-Date: 20-September-2021
+# Date: 20-September-2021
 
 Description :
 
@@ -183,7 +183,7 @@ Description :
 4. --JS Promises
 5. --Schedulers
 
-Date: 21-September-2021
+# Date: 21-September-2021
 
 Description :
 
@@ -192,13 +192,13 @@ Description :
 3. --Practicals of promise, Schedulers
 4. --ES6 Classes
 
-Date: 22-September-2021
+# Date: 22-September-2021
 
 Description :
 
 1. read TS Basics from typescriptlang.org
 
-Date: 23-September-2021
+# Date: 23-September-2021
 
 Description :
 
@@ -209,3 +209,10 @@ Practicals in TS
 4. composing types
 5. Generics
 
+# Date: 24-September-2021
+
+Description :
+
+Practicals in TS
+1. Typescript Documentation
+  --TypeScript for Functional Programmers
