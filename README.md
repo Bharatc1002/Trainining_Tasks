@@ -226,3 +226,17 @@ Practicals in TS
   --Everyday Types
   --Narrowing
   --More on Functions
+
+  # Date: 29-September-2021
+
+Description :
+
+Practicals in TS
+1. Typescript Documentation
+  --Object Types
+  --Creating types from types
+  --Generics
+  --KeyOf type operator
+  --TypeOf type operator
+  --Indexed access types
+  --Conditional types
