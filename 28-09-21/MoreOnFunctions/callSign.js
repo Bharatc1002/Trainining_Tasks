@@ -1,9 +1,11 @@
-function createCounter() {
-    var counter = function (start) { };
-    counter.interval = 123;
-    counter.reset = function () { };
-    return counter;
+function doSomething(fn) {
+    console.log(fn.description + " returned " + fn.Func(6));
 }
-var getCounter = createCounter();
-getCounter(10);
-getCounter.reset();
+var Func = function (num) {
+    return num > 0;
+};
+var secobj = {
+    description: "Hello",
+    Func: Func
+};
+doSomething(secobj);

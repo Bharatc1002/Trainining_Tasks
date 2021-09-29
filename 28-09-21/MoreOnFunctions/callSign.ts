@@ -1,16 +1,19 @@
-interface Counter {
-    (start: number): string;
-    interval: number;
-    reset(): void;
-}
 
-function createCounter():Counter{
-    var counter = <Counter>function(start:number){};
-    counter.interval = 123;
-    counter.reset = function(){};
-    return counter;
-}
 
-var getCounter = createCounter();
-getCounter(10);
-getCounter.reset();
+type DescribableFunction = {
+    description: string;
+    Func(someArg: number): boolean;
+  };
+  function doSomething(fn: DescribableFunction) {
+    console.log(fn.description + " returned " + fn.Func(6));
+  }
+
+  var Func = (num: number): boolean => {
+      return num>0;
+  }
+  var secobj: DescribableFunction = {
+      description: "Hello",
+      Func
+  }
+
+  doSomething(secobj);

@@ -216,3 +216,13 @@ Description :
 Practicals in TS
 1. Typescript Documentation
   --TypeScript for Functional Programmers
+
+  # Date: 28-September-2021
+
+Description :
+
+Practicals in TS
+1. Typescript Documentation
+  --Everyday Types
+  --Narrowing
+  --More on Functions
