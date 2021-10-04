@@ -240,3 +240,8 @@ Practicals in TS
   --TypeOf type operator
   --Indexed access types
   --Conditional types
+
+    # Date: 04-October-2021
+
+Description :
+1. PHP Basic Tasks
