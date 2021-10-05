@@ -247,7 +247,7 @@ Description :
 1. Typescript Documentation
   --Type Manipulation
 
-   # Date: 04-October-2021
+  # Date: 04-October-2021
 
 Description :
 1. PHP Basic Tasks
