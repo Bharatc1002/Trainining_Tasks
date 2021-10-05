@@ -241,6 +241,12 @@ Practicals in TS
   --Indexed access types
   --Conditional types
 
+  # Date: 30-September-2021
+
+Description :
+1. Typescript Documentation
+  --Type Manipulation
+
     # Date: 04-October-2021
 
 Description :
