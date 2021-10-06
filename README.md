@@ -217,7 +217,7 @@ Practicals in TS
 1. Typescript Documentation
   --TypeScript for Functional Programmers
 
-  # Date: 28-September-2021
+# Date: 28-September-2021
 
 Description :
 
@@ -227,7 +227,7 @@ Practicals in TS
   --Narrowing
   --More on Functions
 
-  # Date: 29-September-2021
+# Date: 29-September-2021
 
 Description :
 
@@ -241,7 +241,7 @@ Practicals in TS
   --Indexed access types
   --Conditional types
 
-  # Date: 30-September-2021
+# Date: 30-September-2021
 
 Description :
 1. Typescript Documentation
@@ -251,3 +251,14 @@ Description :
 
 Description :
 1. PHP Basic Tasks
+
+# Date: 04-October-2021
+
+Description :
+1. PHP Basic Tasks
+
+# Date: 06-October-2021
+
+Description :
+1. PHP Array and Array functions.
+2. Project Work.
